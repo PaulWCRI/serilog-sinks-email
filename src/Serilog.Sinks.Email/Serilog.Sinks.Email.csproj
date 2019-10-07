@@ -23,8 +23,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="2.0.0" />
-    <PackageReference Include="Serilog.Sinks.PeriodicBatching" Version="2.0.0" />
+    <PackageReference Include="MailKit" Version="2.3.1.6" />
+    <PackageReference Include="Serilog" Version="2.8.0" />
+    <PackageReference Include="Serilog.Sinks.PeriodicBatching" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
@@ -34,7 +35,7 @@
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <DefineConstants>$(DefineConstants);SYSTEM_NET</DefineConstants>
+    <DefineConstants>TRACE;MAIL_KIT</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
